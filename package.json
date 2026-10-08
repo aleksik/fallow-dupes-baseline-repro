@@ -1,0 +1,14 @@
+{
+  "name": "fallow-dupes-baseline-repro",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "report": "fallow dupes --format json --quiet | jq -r '.clone_groups[] | \"\\(.fingerprint)  \\([.instances[] | \"\\(.file | split(\"/\") | last):\\(.start_line)-\\(.end_line)\"] | join(\" \"))\"'",
+    "baseline": "fallow dupes --save-baseline .fallow-baselines/dupes.json --quiet",
+    "gate": "fallow dupes --baseline .fallow-baselines/dupes.json --fail-on-issues --quiet",
+    "gate:show": "fallow dupes --baseline .fallow-baselines/dupes.json --format json --quiet | jq -r '.clone_groups[] | \"\\(.fingerprint)  \\([.instances[] | \"\\(.file | split(\"/\") | last):\\(.start_line)-\\(.end_line)\"] | join(\" \"))\"'"
+  },
+  "devDependencies": {
+    "fallow": "3.32.0"
+  }
+}

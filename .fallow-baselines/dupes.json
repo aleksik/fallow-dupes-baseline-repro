@@ -1,0 +1,18 @@
+{
+  "kind": "dupes",
+  "clone_groups": [
+    "src/a.ts:2-20|src/b.ts:2-20",
+    "src/c.ts:2-20|src/d.ts:2-20",
+    "src/e.ts:2-20|src/f.ts:2-20"
+  ],
+  "clone_fingerprints": [
+    "dup:a3a1afcd:2",
+    "dup:1c0afc25:2",
+    "dup:871dcb2c:2"
+  ],
+  "normalized_clone_fingerprints": [
+    "dup:c77b3abb6f87acd9-r1:2",
+    "dup:c77b3abb6f87acd9-r3:2",
+    "dup:c77b3abb6f87acd9-r2:2"
+  ]
+}
